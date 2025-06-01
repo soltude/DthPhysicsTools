@@ -124,7 +124,7 @@ In your DazToHueSkeleton node, you should create and position the breast and glu
 
 You will also need to paint `breast_density` and `glute_density` weights on the mesh using an `attribpaint` node. Only paint the left side, it will be mirrored automatically. Bones will be projected onto the mesh based on the weight, with higher weighted regions having more bones. This doesn't need to be pretty, and by setting the display flag on the DthPhatBones node, you can paint while seeing the final result. 
 
-**WARNING** 
+**WARNING** This node uses a `scatter` node to place the leaf bones on the mesh, which means it's not deterministic. If you change anything leading up to the node, it may alter the skeleton, and you will have to re-export from the DazToHueExport node and reimport to UE. 
 
 ## Node Parms. 
 
